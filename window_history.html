@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window History</title>
+	<script type="text/javascript">
+		function next()
+		{
+			window.history.forward();
+		}
+		function previous()
+		{
+			window.history.back();
+		}
+		function show()
+		{
+			var mylink=document.getElementById("link").value;
+			if(mylink=="google")
+				window.location="http://www.google.com";
+			else if(mylink=="twitter")
+				window.location="http://www.twitter.com";
+			else if(mylink=="yahoo")
+				window.location="http://www.yahoo.com";
+			else if(mylink=="facebook")
+				window.location="http://www.facebook.com";
+		}
+	</script>
+</head>
+<body>
+<select id="link" onchange="show()">
+		<option value="google">Google</option>
+		<option value="twitter">twitter</option>
+		<option value="yahoo">Yahoo</option>
+		<option value="facebook">Facebook</option>
+	</select><br>
+	<input type="button" value="next" onclick="next()">
+	<input type="button" value="previous" onclick="previous()">
+</body>
+</html>
